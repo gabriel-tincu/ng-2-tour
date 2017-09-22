@@ -16,11 +16,15 @@ export class ArticleComponent implements OnInit {
     this.link = "https://angular.io";
     this.votes = 10;
   }
-  voteUp() {
+  voteUp(): boolean {
     this.votes ++;
+    return false;
   }
-  voteDown() {
-    this.votes --;
+  voteDown(): boolean {
+    if (this.votes > 0) {
+      this.votes --;
+    }
+    return false;
   }
   ngOnInit() {
   }
