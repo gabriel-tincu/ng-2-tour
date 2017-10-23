@@ -1,5 +1,5 @@
 @import './app/vendor/semantic.min.css';
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 .ui.menu .item img.logo {
     margin-right: 1.5em;
 }
@@ -46,4 +46,3 @@ ul.ui.list li:before {
   clear: both;
   width: 100%;
 }
-

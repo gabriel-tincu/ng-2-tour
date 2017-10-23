@@ -1,18 +1,22 @@
-<form class="ui large form segment">
+<form >
   <h3 class="ui header">Add a link</h3>
-  <div class="field">
-    <label for="title">Title:</label>
-    <input name=title #newTitle>
+  <div>
+    <label class="mat-optgroup-label" for="title">Title:</label>
+    <mat-form-field>
+      <input class="example-full-width" matInput name=title #newTitle>
+    </mat-form-field>
   </div>
-  <div class="field">
-    <label for="link">Link:</label>
-    <input name="link" #newLink>
+  <div >
+    <label class="mat-optgroup-label" for="link">Link:</label>
+      <mat-form-field>
+        <input class="example-full-width" matInput name="link" #newLink>
+      </mat-form-field>
   </div>
-  <button (click)="addArticle(newTitle, newLink)" class="ui positive right float button">
+  <button mat-raised-button color="warm" (click)="addArticle(newTitle, newLink)" >
     Submit link
   </button>
 </form>
 
 <div class="ui grid posts">
-  <app-article></app-article>
+  <app-article *ngFor="let article of articles" [article]="article"></app-article>
 </div>
